@@ -1,0 +1,324 @@
+:root{
+    --primario: #6689b4;
+    --primarioOscuro: #4c6e9a8b;
+    --secundario: #ff9d00;
+    --secundarioOscuro: rgb(233, 287, 2);
+    --blanco: #ffffff;
+    --negro: #000000;
+
+    --fuentePrincipal: 'Staaliches', cursive;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *::before, *:after{
+    box-sizing: inherit;
+}
+
+/*Globales*/
+body{
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+a{
+    text-decoration: none;
+}
+/*
+.img-contenedor{/*Con el contenedor tienes mayor facilidad de mover la imagen
+    text-align: center;
+    margin-top: 50px ;
+}
+*/
+img{
+    width: 350px;
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+h1, h2, h3{
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.2rem;
+}
+h3{
+    font-size: 2.4rem;
+}
+
+
+/*Header*/
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__logo{
+    justify-content: left;
+    align-items: left;
+    margin: 3rem 0 0 30rem;
+}
+
+/*Header Redes Sociales*/
+.redesSociales{
+    display: flex;
+    align-items: right;
+    margin-left: 20rem;
+    margin-right: 50rem;
+    gap: 4rem;
+}
+.redesSociales__facebook img,
+.redesSociales__instagram img,
+.redesSociales__tiktok img,
+.redesSociales__whatsapp img{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    object-fit: contain;
+    cursor: pointer;
+    text-align: center;
+}
+@media (max-width: 768px) {/*Se implementa si la pantalla es MENOR a 768px*/
+    .header{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .header__logo{
+        margin: 3rem 0;
+    }
+    .redesSociales{
+        margin: 0;
+        gap: 2rem;
+    }
+}
+
+
+/*Footer*/
+.footer{
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    margin-top: 2rem; ;
+}
+.footer__texto{
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+/*Navegacion*/
+.navegacion{/*Maneja TODA la barra de navegacion*/
+    background-color: var(--primarioOscuro);
+    padding: 1rem;/*Espacio interno*/
+    display: flex;
+    justify-content: center;
+    gap: 2rem;/*Separa cada uno de los elementos de la barra*/
+}
+.navegacion__enlace{/*Solo maneja los textos*/
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 3rem;
+}
+.navegacion__enlace--activo,
+.navegacion__enlace:hover{
+    color: var(--secundario);
+}
+
+/*Grid*/
+.grid{/*Sintaxis para acomodar correctamente las imagenes*/
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));/*minmax ayuda para que al reducir la pagina no solo se reduzca las dos ultimas imagenes*/
+    gap: 2rem;/*Separecion entre columnas y filas*/
+}
+@media (max-width: 768px){
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*Productos*/
+.producto{/*Cambios a toda la parte de los productos*/
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+}
+.producto__imagen{
+    width: 100%;/*Ajuste horizontal*/
+}
+.producto__nombre{
+    font-size: 4rem;
+}
+.producto__precio{
+    font-size: 2.8rem;
+    color: var(--secundario);
+}
+.producto__nombre,
+.producto__precio{
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+
+/*Graficos*/
+.grafico{
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1 / 3;
+}
+.grafico--tresSanqueros{
+    grid-row: 1 / 2; 
+    background-image: url(../images/TresSanqueros.jpg);
+}
+.grafico--tresCabezones{
+    background-image: url(../images/TresCabezones.jpg);
+    grid-row: 2 / 3;
+    grid-column: 3 / 6 ;
+}
+.grafico--monja{
+    grid-row: 3 / 4;
+    background-image: url(../images/Monja.jpg);
+}
+@media (max-width: 768px){
+    .grafico--tresSanqueros{
+        grid-row: 1 / 2;
+        grid-column: 1 / 3;
+        padding-top: 100%;
+    }
+    .grafico--tresCabezones{
+        grid-row: 3 / 4;
+        grid-column: 1 / 3;
+        padding-top: 100%;
+    }
+}
+
+/*Nosotros*/
+.nosotros{
+    display: flex;
+    flex-direction: raw;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+@media (max-width: 768px) {
+    .nosotros img{
+        padding-left: 4rem;
+    }
+}
+@media (max-width: 480px) {
+    .nosotros{
+        flex-direction: column;
+        text-align: center;
+    }
+    .nosotros img{
+        padding-left: 0;
+    }
+}
+
+/*Porque Nosotros*/
+.porqueContenedor{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));;
+    gap: 4rem;
+}
+.porqueContenedor__precios,
+.porqueContenedor__cobertura,
+.porqueContenedor__segurudad{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: var(--fuentePrincipal);
+    color: var(--secundario);
+}
+.porqueContenedor p{
+    font-size: 1.8rem;
+    color: var(--blanco);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.porqueContenedor img{
+    width: 100%;
+    height: 10rem;
+    margin-left: 5px;
+    object-fit: contain;
+}
+@media (max-width: 768px) {
+    .porqueContenedor{
+        grid-template-columns: repeat(1, minmax(0, 1fr));;
+    }
+    .porqueContenedor__moneda img,
+    .porqueContenedor__carrito img,
+    .porqueContenedor__seguridad img{
+        width: 100%;
+        height: 8rem;
+        object-fit: contain;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/*Pagina del Producto*/
+.robot{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.robotBoton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    font-family: var(--fuentePrincipal);
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    transition: background-color 0.3s ease;
+}
+.robotBoton:hover{
+    background-color: var(--secundarioOscuro);
+    color: #000000;
+    font-size: 2.2rem;
+}
+.robotDescripcion{
+    text-align: center;
+    padding-top: 15rem;
+}
+.robot img{
+    align-items: center;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .robot{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        margin-left: 0;
+    }
+    .robot img{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .robotDescripcion{
+        padding-top: 0;
+        padding-right: 2rem;
+    }
+    .robotBoton{
+        margin-left: 5rem;
+        margin-right: 5rem;
+        justify-content: center;
+        text-align: center;
+    }
+}
