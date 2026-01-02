@@ -1,0 +1,50 @@
+@use  'base/variables' as v;
+@use  'base/mixins' as m;
+
+.paquetes {
+    padding: 4rem 2rem;
+    background-color: v.$verde;
+
+    @include m.contenedor;
+    @include m.tablet {
+        @include m.grid(2);
+    }
+
+    .paquete{
+        background-color: v.$blanco;
+        border-radius: 8px;
+        transition: box-shadow 0.3s ease;
+        cursor: pointer;
+
+        &__lista{
+            
+            li{
+                font-family: v.$fuente_principal;
+                padding: 1.5rem;
+                border-bottom: 1px solid #d2b8b8;
+            }
+        }
+
+        &__informacion {
+            background-color: v.$morado;
+            color: v.$blanco;
+            padding: 2rem;
+            font-family: v.$fuente_principal;
+            font-size: 2rem;
+        }
+
+        &__precio {
+            background-color: v.$amarillo;
+            color: v.$negro;
+            padding: 1.5rem;
+            font-family: v.$fuente_principal;
+            font-size: 1.5rem;
+        }
+
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        &:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 8px rgba(161, 6, 161, 0.2);
+        }
+    }
+}

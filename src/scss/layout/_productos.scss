@@ -1,0 +1,51 @@
+@use  'base/variables' as v;
+@use  'base/mixins' as m;
+
+.productos {
+    padding: 4rem 2rem;
+
+    h1 {
+        text-align: center;
+        font-size: 4rem;
+        color: v.$negro;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 4rem;
+    }
+
+    .producto {
+        border-radius: 8px;
+        overflow: hidden;
+
+        &:hover {
+            box-shadow: 0 4px 8px rgba(211, 2, 127, 0.854);
+        }
+
+        &__imagen {
+            width: 100%;
+            height: 350px;
+            display: block;
+        }
+
+        &__informacion {
+            padding: 1rem;
+            background-color: v.$blanco;
+            text-align: center;
+        }
+        &__nombre {
+            font-family: v.$fuente_principal;
+            font-size: 3.5rem;
+            color: v.$negro;
+            margin-bottom: 0.5rem;
+        }
+
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        &:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 8px rgba(161, 6, 161, 0.2);
+        }
+    }
+}

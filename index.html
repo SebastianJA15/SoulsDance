@@ -3,38 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FrontEnd Store</title>
+    <title>SoulsDance</title>
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="build/css/app.css">
 </head>
 <body>
 
     <header class="header"><!--BEM: BLoque -->
-        <a href="index.html">
-            <img class="header__logo" src="images/soulsDance-pica.png" alt="Logotipo"><!--BEM: Elemento -->
-        </a>
-        <div class="redesSociales">
-            <a class="redesSociales__facebook" href="https://www.facebook.com/profile.php?id=61564468757534"><p>Facebook</p><img src="images/facebook.png" alt=""></a>
-            <a class="redesSociales__instagram" href="https://www.instagram.com/soulsdanceagencia/"><p>Instagram</p><img src="images/instagram.png" alt=""></a>
-            <a class="redesSociales__tiktok" href="https://www.tiktok.com/@souls.dance.agencia"><p>TikTok</p><img src="images/tiktok.png" alt=""></a>
-            <a class="redesSociales__whatsapp" href="https://wa.me/527791051575"><p>Whatsapp</p><img src="images/whatsapp.png" alt=""></a>
+        <div class="contenedor contenido-header">
+            <a href="index.html">
+            <img class="header__logo" src="src/images/soulsDance-pica.png" alt="Logotipo"><!--BEM: Elemento -->
+            </a>
+            <nav class="navegacion-principal"><!--BEM: BLoque -->
+                <a href="https://www.facebook.com/profile.php?id=61564468757534"><p>Facebook</p></a>
+                <a href="https://www.instagram.com/soulsdanceagencia/"><p>Instagram</p></a>
+                <a href="https://www.tiktok.com/@souls.dance.agencia"><p>TikTok</p></a>
+                <a href="https://wa.me/527791051575"><p>Whatsapp</p></a>
+            </nav>
         </div>
     </header>
 
-    <nav class="navegacion"><!--BEM: BLoque -->
-        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a><!--BEM: Elemento -->
-        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a><!--BEM: Elemento -->    
-    </nav>
+    <div class="video">
+        <div class="overlay">
+            <div class="contenedor contenido-video">
+                <h2>Souls Dance</h2>
+                <p>Agencia de Entretenimiento</p>
+            </div>
+            </div>
+        <video  autoplay muted loop>
+            <source src="videos/La Hora Loca en una Boda Cubana _ Zanqueros, Música y Fiesta en La Habana.mp4" type="video/mp4"/>
+        </video>
+        </div>
 
-    <main class="contenedor">
-        <h1>Nuestro Producto</h1>
+        <section class="sobre-nosotros">
+        <div class="contenedor">
+            <h2>Bienvenidos a Souls Dance</h2>
+            <p>En Souls Dance, nos especializamos en ofrecer servicios de entretenimiento excepcionales para todo tipo de 
+                eventos. Ya sea que estés planeando una boda, una fiesta corporativa, un cumpleaños, fiesta de XV años o 
+                cualquier otra celebración, nuestro equipo de profesionales está aquí para hacer que tu evento sea inolvidable. Contamos con una amplia variedad de opciones de entretenimiento, danza y animación. Nuestro objetivo es crear experiencias únicas y memorables que superen tus expectativas. ¡Déjanos ayudarte a transformar tu evento en una ocasión verdaderamente especial!</p>
+        </section>
+
+    <section class="productos">
+        <h1>Nuestros Productos</h1>
         <div class="grid">
             <div class="producto">
                 <a href="producto.html">
-                    <img class="producto__imagen" src="images/RobotAmarillo.jpg" alt="">
+                    <img class="producto__imagen" src="src/images/RobotAmarillo.jpg" alt="">
                     <div class="producto__informacion">    
                         <p class="producto__nombre">Zanquero Robot</p>
                         <p class="producto__precio">$1500</p>
@@ -43,16 +61,16 @@
              </div> <!-- .prodcuto -->
              <div class="producto">
                 <a href="producto.html">
-                    <img class="producto__imagen" src="images/robot.jpg" alt="">
+                    <img class="producto__imagen" src="src/images/robot.jpg" alt="">
                     <div class="producto__informacion">    
-                        <p class="producto__nombre">Zanquero Robor</p>
+                        <p class="producto__nombre">Zanquero Robot</p>
                         <p class="producto__precio">$1500</p>
                     </div>
                 </a>
              </div> <!-- .prodcuto -->
              <div class="producto">
                 <a href="producto.html">
-                    <img class="producto__imagen" src="images/puppet.jpg" alt="">
+                    <img class="producto__imagen" src="src/images/puppet.jpg" alt="">
                     <div class="producto__informacion">    
                         <p class="producto__nombre">Zanquero Puppet</p>
                         <p class="producto__precio">$1500</p>
@@ -61,7 +79,7 @@
              </div> <!-- .prodcuto -->
              <div class="producto">
                 <a href="producto.html">
-                    <img class="producto__imagen" src="images/BadBunny.jpg" alt="">
+                    <img class="producto__imagen" src="src/images/BadBunny.jpg" alt="">
                     <div class="producto__informacion">    
                         <p class="producto__nombre">Bad Bunny</p>
                         <p class="producto__precio">$1500</p>
@@ -70,7 +88,7 @@
              </div> <!-- .prodcuto -->
              <div class="producto">
                 <a href="producto.html">
-                    <img class="producto__imagen" src="images/LuisMiguel.jpg" alt="">
+                    <img class="producto__imagen" src="src/images/LuisMiguel.jpg" alt="">
                     <div class="producto__informacion">    
                         <p class="producto__nombre">Luis Miguel</p>
                         <p class="producto__precio">$1500</p>
@@ -79,7 +97,7 @@
              </div> <!-- .prodcuto -->
              <div class="producto">
                 <a href="producto.html">
-                    <img class="producto__imagen" src="images/CarritoShots.jpg" alt="">
+                    <img class="producto__imagen" src="src/images/CarritoShots.jpg" alt="">
                     <div class="producto__informacion">    
                         <p class="producto__nombre">Carrito de Shots</p>
                         <p class="producto__precio">$1500</p>
@@ -88,7 +106,7 @@
              </div> <!-- .prodcuto -->
              <div class="producto">
                 <a href="producto.html">
-                    <img class="producto__imagen" src="images/Daddy.jpg" alt="">
+                    <img class="producto__imagen" src="src/images/Daddy.jpg" alt="">
                     <div class="producto__informacion">    
                         <p class="producto__nombre">Daddy Yankee</p>
                         <p class="producto__precio">$1500</p>
@@ -97,24 +115,50 @@
              </div> <!-- .prodcuto -->
              <div class="producto">
                 <a href="producto.html">
-                    <img class="producto__imagen" src="images/IronMan.jpg" alt="">
+                    <img class="producto__imagen" src="src/images/IronMan.jpg" alt="">
                     <div class="producto__informacion">    
                         <p class="producto__nombre">IronMan</p>
                         <p class="producto__precio">$1500</p>
                     </div>
                 </a>
              </div> <!-- .prodcuto -->
-
-             <div class="grafico grafico--tresSanqueros"></div>
-             <div class="grafico grafico--tresCabezones"></div>
-             <div class="grafico grafico--monja"></div>
-
         </div>
-    </main>
+    </section>
+
+    <section>
+        <h3>Paquetes y Servicios que Ofrecemos</h3>
+        <div class="paquetes">
+            <div class="paquete">
+                <h2 class="paquete__informacion">Paquete Básico</h2>
+                <ul class="paquete__lista">
+                    <li>1 Zanquero Robot</li>
+                    <li>1 Carrito de Shots</li>
+                    <li>Duración: 2 horas</li>
+                </ul>
+                <p class="paquete__precio">$3000</p>
+            </div>
+            <div class="paquete">
+                <h2 class="paquete__informacion">Paquete Premium</h2>
+                <ul class="paquete__lista">
+                    <li>2 Zanquero Robot</li>
+                    <li>1 Carrito de Shots</li>
+                    <li>1 Animador</li>
+                    <li>Duración: 4 horas</li>
+                </ul>
+                <p class="paquete__precio">$6000</p>
+        </div>
+    </section>
+
+    <section id="galeria" class="galeria">
+        <h3>Nuestra Galería</h3>
+        <div class="galeria__imagenes"></div>
+    </section>
 
     <footer class="footer">
-        <p class="footer__texto">Front End Store - Todos los derechos reservados</p>
+        <p class="footer__texto">Souls Dance Agencia de Entretenimiento - Todos los derechos reservados</p>
     </footer>
+
+    <script src="build/js/app.js"></script>
 
 </body>
 </html>

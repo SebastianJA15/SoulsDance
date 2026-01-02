@@ -1,0 +1,31 @@
+{
+  "name": "soulsdance",
+  "version": "1.0.0",
+  "description": "Pagina web para agencia de Entretenimiento",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css",
+    "dev": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SebastianJA15/SoulsDance.git"
+  },
+  "keywords": [
+    "SoulsDance",
+    "Entretenimiento",
+    "Batucadas",
+    "Zanqueros"
+  ],
+  "author": "Sebastian Jarillo Angeles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SebastianJA15/SoulsDance/issues"
+  },
+  "homepage": "https://github.com/SebastianJA15/SoulsDance#readme",
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.94.2"
+  }
+}
